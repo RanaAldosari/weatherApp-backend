@@ -76,7 +76,7 @@ app.get('/', (req, res) => {
         app.use('/weather', auth_middleware_1.authorized, weatherRoutes);
         app.use('/history', auth_middleware_1.authorized, historyRoutes);
         const PORT = process.env.PORT || 3000;
-        app.listen(helpers_1.port, () => logger_1.default.info(`Server is connected on port ${PORT}`));
+        app.listen(PORT, () => logger_1.default.info(`Server is connected on port ${PORT}`));
     }
     catch (error) {
         logger_1.default.error('Failed to connect with MongoDB:', error);
